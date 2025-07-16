@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa | AsilAdenYachtTour</title>
+    <link rel="stylesheet" href="css/style.css">
+
+   <script src="https://kit.fontawesome.com/924f0f79ef.js"
+    crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <section id="menu">
+        <div id="logo">
+            <img src="img/AsilAdenYachtTour.jpg" alt="AsilAdenYachtTour">
+            
+            <a href="#Anasayfa" class="logo-text">Aşil Aden Yacht Tour</a>
+        </div>
+        <nav>
+            <a href="#Anasayfa"><i class="fa-solid fa-house ikon"></i>Anasayfa</a>
+            <a href="#gocek-tour"><i class="fa-solid fa-info ikon"></i>Hakkımızda</a>
+            <a href="#cards-container"><i class="fa-solid fa-sailboat ikon"></i>Turlar</a>
+            <a href="#iletisim"><i class="fa-solid fa-map-pin ikon"></i>İletişim</a>
+        </nav>
+        
+    </section>
+
+    <section id ="Anasayfa">
+        <video autoplay muted loop id="bannerVideo">
+            <source src="video/anasayfa.mp4" type="video/mp4">
+            Tarayıcınız video etiketini desteklemiyor.
+        </video>
+        
+    </section>
+
+    <div id="içerik">
+        <h2>Deniz Tutkunları İçin</h2>
+        <h1>Aşil Aden Yacht Tour</h1>
+        <h3>Deniz tutkunları için eşsiz bir deneyim sunuyoruz. Turlarımızla Akdeniz'in güzelliklerini keşfedin.</h3>
+    </div>
+
+    <div id="cards-container">
+        <div class="card">
+            <img src="img/card1.jpg" alt="Card 1">
+            <h4>Saatlik Günlük Kiralama</h4>
+            
+        </div>
+        <div class="card">
+            <img src="img/card2.jpg" alt="Card 2">
+            <h4>Yat Organizasyonu</h4>
+
+        </div>
+        <div class="card">
+            <img src="img/card3.jpg" alt="Card 3">
+            <h4>Özel Turlar</h4>
+           
+        </div>
+        
+    </div>
+
+    
+<div class="marquee-row">
+    <div class="marquee-box">
+        <span>Yaz Sezonu İndirimleri Başladı!</span>
+    </div>
+    <div class="marquee-box">
+        <span>Yeni Turlarımızı Keşfedin!</span>
+    </div>
+</div>
+<div class="marquee-row">
+    <div class="marquee-box">
+        <span>Rezervasyon için hemen arayın!</span>
+    </div>
+    <div class="marquee-box">
+        <span>Deniz ve Güneş Sizi Bekliyor!</span>
+    </div>
+</div>
+<div class="marquee-row">
+    <div class="marquee-box">
+        Talebiniz üzerine organizasyon<br>
+        <span style="font-weight:normal;font-size:1rem;">Belirlenen süre ve istekleriniz göz önünde bulundurularak hazırlanan organizasyonlar.</span>
+    </div>
+    <div class="marquee-box">
+        Rekreasyon senaryosu<br>
+        <span style="font-weight:normal;font-size:1rem;">Özel turlar,partiler ve günbatımı turları için bize ulaşabilirsiniz.</span>
+    </div>
+</div>
+<div class="marquee-row">
+    <div class="marquee-box">
+        Olağanüstü manzaralı noktalar<br>
+        <span style="font-weight:normal;font-size:1rem;">Seyahat planınıza en iyi lokasyonları, eğlenceleri ve gezileri dahil ediyoruz.</span>
+    </div>
+    <div class="marquee-box">
+        Özel istekler<br>
+        <span style="font-weight:normal;font-size:1rem;">Evlilik teklifleri,yıl dönümleri ve diğer özel anlarınız için unutulmaz deneyimler sunuyoruz.</span>
+    </div>
+</div>
+
+
+<script>
+const marqueeBoxes = document.querySelectorAll('.marquee-box');
+let scrollTimeout = null;
+
+window.addEventListener('scroll', function() {
+    const scrollY = window.scrollY;
+    marqueeBoxes.forEach((box, i) => {
+        box.style.transition = 'transform 0.5s cubic-bezier(.4,1.4,.6,1), opacity 0.5s';
+      
+        const direction = i % 2 === 0 ? -1 : 1;
+        
+        const offset = direction * Math.min(60, Math.abs(scrollY % 120 - 60));
+        box.style.transform = `translateX(${offset}px)`;
+        box.style.opacity = '0.85';
+    });
+
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+        marqueeBoxes.forEach(box => {
+            box.style.transition = 'transform 0.7s cubic-bezier(.4,1.4,.6,1), opacity 0.7s';
+            box.style.transform = 'translateX(0)';
+            box.style.opacity = '1';
+        });
+    }, 120);
+});
+</script>
+
+<div id="gallery">
+    <img src="img/göcek1.jpg" alt="göcek1">
+    <img src="img/göcek2.jpg" alt="göcek2">
+    <img src="img/göcek3.jpg" alt="göcek3">
+    <img src="img/göcek4.jpg" alt="göcek4">
+    <img src="img/göcek5.jpg" alt="göcek5">
+</div>
+
+<section id="gocek-tour" style="padding: 40px 20px; background-color: #f9f9f9;">
+  <div class="gocek-tour-content">
+    <h2>Asiladen Yacht Tour – Göcek</h2>
+    <p>Her misafirimiz bizim için özeldir. <br><br>
+      Asiladen ile Göcek’in berrak koylarında kısa süreli ama unutulmaz bir tekne turuna çıkın. <br>
+      İster romantik bir gün batımı, ister arkadaşlarınızla sakin bir koyda yüzme keyfi!
+    </p>
+
+    <h3 style="margin-top: 30px;">🚤 Hizmetlerimiz:</h3>
+    <ul style="font-size: 17px; line-height: 1.8;">
+      <li>2–4 saatlik özel Göcek çıkışlı tekne turları</li>
+      <li>Gün batımı ve yüzme molalı geziler</li>
+      <li>Doğum günü ve özel gün kutlamaları</li>
+      <li>İçecek ve hafif atıştırmalıklar dahil</li>
+      <li>Müzik sistemi, gölgelik ve dinlenme alanları</li>
+    </ul>
+
+    <h3 style="margin-top: 30px;">💬 Sık Sorulan Sorular</h3>
+    <p><strong>Tek başıma katılabilir miyim?</strong><br>
+    Elbette! Küçük gruplar veya bireysel katılım için uygundur.</p>
+
+    <p><strong>Hava kötü olursa?</strong><br>
+    Tur güvenli değilse ertelenir. Size uygun yeni bir tarih belirlenir.</p>
+
+    <p><strong>Fiyata neler dahil?</strong><br>
+    Kaptan, yakıt, içecek, atıştırmalık ve keyifli anlar tamamen dahil.</p>
+
+  </div>
+</section>
+
+<section id="iletisim">
+  <div>
+    <form id="iletisimFormu">
+      <input type="text" name="ad" placeholder="Adınız" required><br><br>
+      <input type="email" name="email" placeholder="E-posta" required><br><br>
+      <input type="tel" name="telefon" placeholder="Telefon"><br><br>
+      <textarea name="mesaj" placeholder="Mesajınız" rows="5" required></textarea><br><br>
+      <input type="submit" value="Gönder">
+    </form>
+    <div id="formMesaj"></div>
+  </div>
+</section>
+
+
+
+
+<script>
+  document.getElementById("iletisimFormu").addEventListener("submit", function(e) {
+    e.preventDefault(); // Sayfa yenilenmesin
+
+    const form = this;
+    const formData = new FormData(form);
+
+    fetch("form.php", {
+      method: "POST",
+      body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("formMesaj").innerText = data;
+      form.reset();
+    })
+    .catch(error => {
+      document.getElementById("formMesaj").innerText = "Bir hata oluştu. Lütfen tekrar deneyin.";
+    });
+  });
+</script>
+
+<footer id="footer">
+  <div class="footer-content">
+    <span>© 2025 AsilAden Yacht Tour | Tüm hakları saklıdır.</span>
+    <span style="margin-left:16px;">
+      <i class="fa-solid fa-phone"></i> +90 530 122 30 53
+      &nbsp;|&nbsp;
+      <i class="fa-solid fa-envelope"></i> asiladen34@gmail.com
+    </span>
+  </div>
+</footer>
+</body>
+</html>
